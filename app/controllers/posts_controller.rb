@@ -18,5 +18,6 @@ class PostsController < ApplicationController
 
     item = Post.find(params[:id])
     render json: { post: item }
+    # ここで取得したデータをchecked.jsへ送信している
   end
 end
