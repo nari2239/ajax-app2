@@ -10,6 +10,11 @@ function check() {
       // レスポンスとして欲しい情報の形式を指定
       XHR.send();
       // リクエストを送信
+      XHR.onload = () => {
+        const item = XHR.response.post;
+        // レスポンスされたJSONにアクセス。checkedアクションで、item(更新後の情報を入れた変数)をpostとして受け取ると指定したので、レスポンスの中にあるpostとすることで取得できる。
+
+      }
     });
   });
 }
