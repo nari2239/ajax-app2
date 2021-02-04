@@ -11,6 +11,10 @@ function check() {
       XHR.send();
       // リクエストを送信
       XHR.onload = () => {
+        if (XHR.status != 200) {
+          alert(`Error ${XHR.status}: ${XHR.statusText}`);
+          return null;
+        }
         const item = XHR.response.post;
         // レスポンスされたJSONにアクセス。checkedアクションで、item(更新後の情報を入れた変数)をpostとして受け取ると指定したので、レスポンスの中にあるpostとすることで取得できる。
         if (item.checked === true) {
