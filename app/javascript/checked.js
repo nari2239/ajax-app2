@@ -13,8 +13,13 @@ function check() {
       XHR.onload = () => {
         const item = XHR.response.post;
         // レスポンスされたJSONにアクセス。checkedアクションで、item(更新後の情報を入れた変数)をpostとして受け取ると指定したので、レスポンスの中にあるpostとすることで取得できる。
-
-      }
+        if (item.checked === true) {
+          post.setAttribute("data-check", "true");
+        } else if (item.checked === false) {
+          post.removeAttribute("data-check");
+          // checkedカラム次第で、各投稿タグの属性にdata-checkをtrueにするかfalseにするかを処理する
+        }
+      };
     });
   });
 }
