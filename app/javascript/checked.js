@@ -28,4 +28,4 @@ function check() {
   });
 }
 
-window.addEventListener("load", check);
+setInterval(check, 1000);
