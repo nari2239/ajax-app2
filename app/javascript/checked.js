@@ -3,8 +3,10 @@ function check() {
   posts.forEach(function (post) {
     if (post.getAttribute("data-load") != null) {
       return null;
+      // data-load属性がtrueならば(1回目の処理でdata-load属性はtrueが追加される)、この関数の処理は停止になる
     }
     post.setAttribute("data-load", "true");
+    // data-load属性を追加
     post.addEventListener("click", () => {
       const postId = post.getAttribute("data-id");
       const XHR = new XMLHttpRequest();
