@@ -4,8 +4,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(content: params[:content])
-    redirect_to action: :index
+    post = Post.create(content: params[:content], checked: false)
+    # 入力した情報と既読情報を保存
+    render json:{ post: post }
   end
 
   def checked
