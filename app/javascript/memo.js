@@ -15,6 +15,10 @@ function memo() {
       const item = XHR.response.post;
       // レスポンスされたJSONにアクセス。createアクションで、item(更新後の情報を入れた変数)をpostとして受け取ると指定したので、レスポンスの中にあるpostとすることで取得できる。
       const list = document.getElementById("list");
+      // index.html.erbにある、非同期で投稿を描画するdivタグの情報を取得
+      const formText = document.getElementById("content");
+      // 入力した投稿情報を取得
+      
     }
   });
 }
