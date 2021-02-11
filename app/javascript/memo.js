@@ -12,6 +12,9 @@ function memo() {
         alert(`Error ${XHR.status}: ${XHR.statusText}`);
         return null;
       }
+      const item = XHR.response.post;
+      // レスポンスされたJSONにアクセス。createアクションで、item(更新後の情報を入れた変数)をpostとして受け取ると指定したので、レスポンスの中にあるpostとすることで取得できる。
+      const list = document.getElementById("list");
     }
   });
 }
