@@ -18,7 +18,17 @@ function memo() {
       // index.html.erbにある、非同期で投稿を描画するdivタグの情報を取得
       const formText = document.getElementById("content");
       // 入力した投稿情報を取得
-      
+      const HTML = `
+      <div class="post" data-id=${item.id}>
+         <div class="post-date">
+           投稿日時：${item.created_at}
+         </div>
+         <div class="post-content">
+         ${item.content}
+         </div>
+       </div>
+      `;
+
     }
   });
 }
