@@ -29,7 +29,7 @@ function memo() {
        </div>
       `;
       list.insertAdjacentHTML("afterend", HTML);
-
+      formText.value = "";
     }
   });
 }
