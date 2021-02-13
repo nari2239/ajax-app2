@@ -28,6 +28,7 @@ function memo() {
          </div>
        </div>
       `;
+      list.insertAdjacentHTML("afterend", HTML);
 
     }
   });
