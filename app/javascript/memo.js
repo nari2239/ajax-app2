@@ -29,6 +29,10 @@ function memo() {
        </div>
       `;
       list.insertAdjacentHTML("afterend", HTML);
+      // beforebrgin 親要素の前
+      // afterbegin 子要素の前
+      // beforeend 子要素の後
+      // afterend 親要素の後
       formText.value = "";
     }
     e.preventDefault();
